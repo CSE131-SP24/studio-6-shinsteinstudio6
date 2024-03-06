@@ -13,10 +13,19 @@ public class RecursiveMethods {
 	 */
 	public static double geometricSum(int n) {
 		
-			// FIXME compute the geometric sum for the first n terms recursively
+		// FIXME compute the geometric sum for the first n terms recursively
+		int newNumber = 0;
+		if (n==0) {
 			return 0;
-		
-	}
+		}
+			else if (n==1) {
+				return 0.5;
+			}
+			else {
+				return geometricSum(n-1) + Math.pow(0.5, n);
+			}
+		}
+
 
 	/**
 	 * This method uses recursion to compute the greatest common divisor
